@@ -1,0 +1,16 @@
+/* Static enhancements; reference-compiled.css is pre-built and needs NO Tailwind/npm. */
+:root{color-scheme:dark}
+html{scroll-behavior:smooth}
+body{overflow-x:hidden}
+section{scroll-margin-top:1rem}
+a,button{-webkit-tap-highlight-color:transparent}
+a:focus-visible,button:focus-visible{outline:3px solid #ffa33b;outline-offset:4px}
+.toast{position:fixed;left:50%;bottom:1.2rem;transform:translate(-50%,1.2rem);color:#1a0821;background:#ffab45;border:1px solid #ffe2ab;box-shadow:0 12px 50px #0009;border-radius:999px;padding:.65rem 1.3rem;z-index:999;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;font-size:.88rem;font-weight:700;white-space:normal;text-align:center;max-width:calc(100vw - 2rem)}
+.toast.is-visible{opacity:1;transform:translate(-50%,0)}
+a.is-unavailable{opacity:.65;cursor:not-allowed;filter:grayscale(.4)}
+/* Ensure all links are keyboard-readable and story assets behave well */
+footer img{aspect-ratio:1;object-fit:cover;border-radius:50%;border:2px solid #d951fd}
+button[data-copy-ca]{white-space:normal;max-width:calc(100vw - 1rem)}
+button[data-copy-ca] span{overflow-wrap:anywhere}
+@media(max-width:550px){.fire{overflow-wrap:anywhere}section#home{padding-bottom:4.5rem}section#home h1{font-size:clamp(3.25rem,14.5vw,6rem)}#community .font-meme a{font-size:1.1rem}#community .flex.justify-center{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
